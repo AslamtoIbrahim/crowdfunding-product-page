@@ -19,7 +19,8 @@ export default {
       backgroundImage: {
         'hero-desktop' : "url('../../images/image-hero-desktop.jpg')",
         'hero-mobile' : "url('../../images/image-hero-mobile.jpg')",
-      }
+      },
+      
     },
   },
   plugins: [],

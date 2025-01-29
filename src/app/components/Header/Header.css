@@ -1,0 +1,7 @@
+
+
+a{
+    @apply
+    text-white  font-commissioner text-[0.75rem] md:text-[1rem]
+     hover:underline hover:decoration-gray-200
+}
