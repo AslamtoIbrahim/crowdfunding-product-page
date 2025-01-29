@@ -1,0 +1,13 @@
+
+
+.mobile-list li{
+    @apply
+    px-7 py-7
+}
+
+.mobile-list a{
+    @apply
+    text-gray-950
+    font-bold text-base
+    hover:no-underline
+}
