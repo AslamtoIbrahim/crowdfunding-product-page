@@ -12,7 +12,7 @@ function Header() {
     setActive(!active);
   };
   return (
-    <header className="relative bg-hero-mobile md:bg-hero-desktop bg-no-repeat bg-center bg-cover w-full  h-[25rem] px-[2.1875rem] py-[1.5rem] md:px-8 md:py-5 lg:py-[3.25rem] lg:px-[10.4375rem]">
+    <header className="absolute top-0 bg-hero-mobile md:bg-hero-desktop bg-no-repeat bg-center bg-cover w-full  h-[25rem] px-[2.1875rem] py-[1.5rem] md:px-8 md:py-5 lg:py-[3.25rem] lg:px-[10.4375rem]">
       <section className="flex items-center justify-between">
         <div className="flex w-full md:w-auto items-center justify-between">
           <Image src={logo} alt="logo image" width={129} height={21} />
