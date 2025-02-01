@@ -23,7 +23,7 @@ function BackProject() {
       <p className="col-span-2 text-base text-stone-500 font-commissioner text-center">
         A beautiful & handcrafted monitor stand to reduce neck and eye strain.
       </p>
-      <div className="flex justify-between w-full mt-[1.8125rem] md:mt-[2.625rem] ">
+      <div className="flex justify-between items-center w-full mt-[1.8125rem] md:mt-[2.625rem] ">
         <Button text="Back this project" />
         <BookButton
           text={isclicked ? "Bookmarked" : "Bookmark"}

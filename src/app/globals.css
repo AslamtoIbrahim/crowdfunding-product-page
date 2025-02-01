@@ -7,6 +7,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&display=swap');
   --background: #FAFAFA;
   --foreground: #171717;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,3 +18,14 @@
 }
 
  
+
+.commissioner-font {
+  font-family: "Commissioner", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "FLAR" 0,
+    "VOLM" 0;
+}
