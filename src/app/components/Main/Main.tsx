@@ -1,5 +1,6 @@
 import BackProject from "./BackProject";
 import BackStatics from "./BackStatics";
+import DialogBack from "./Dialog/DialogBack";
 import Project from "./Project/Project";
 
 
@@ -9,6 +10,7 @@ function Main(){
         <BackProject />
         <BackStatics />
         <Project />
+        <DialogBack />
        </main>
     );
 }
