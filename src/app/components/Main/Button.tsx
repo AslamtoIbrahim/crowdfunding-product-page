@@ -3,10 +3,12 @@ type props = {
   style?: string;
   ability?: boolean;
   color?: string;
+  onClick?: React.MouseEventHandler;
 };
-function Button({ text, style = "", ability = false , color}: props) {
+function Button({ text, style = "", ability = false, color, onClick }: props) {
   return (
     <button
+      onClick={onClick}
       disabled={ability}
       style={{ padding: style, backgroundColor: color }}
       className={`

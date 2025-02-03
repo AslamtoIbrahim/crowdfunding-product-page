@@ -3,9 +3,17 @@ import { useState } from "react";
 import BackPledge from "./BackPledge";
 import CloseDialog from "./CloseDialog";
 
-function DialogBack() {
+type props = {
+  closeClick?: () => void;
+};
+function DialogBack({ closeClick }: props) {
   const [isClose, setIsClose] = useState(false);
-  const handleClose = () => setIsClose(!isClose);
+  const handleClose = () => {
+    if (closeClick) {
+      closeClick();
+    }
+    setIsClose(!isClose);
+  };
   return (
     <div className={`${isClose && `hidden`}`}>
       <div className="fixed inset-0 bg-black/35 "></div>

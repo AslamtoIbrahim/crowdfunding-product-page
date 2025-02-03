@@ -5,7 +5,12 @@ import Button from "./Button";
 import BookButton from "./BookButton";
 import { useState } from "react";
 
-function BackProject() {
+type props = {
+  clickButton?: React.MouseEventHandler;
+}
+
+function BackProject({clickButton} :props) {
+
   const [isclicked, setIsClicked] = useState(false);
   const handleClick = () => {
     setIsClicked(!isclicked);
@@ -24,7 +29,7 @@ function BackProject() {
         A beautiful & handcrafted monitor stand to reduce neck and eye strain.
       </p>
       <div className="flex justify-between items-center w-full mt-[1.8125rem] md:mt-[2.625rem] ">
-        <Button text="Back this project" />
+        <Button text="Back this project" onClick={clickButton}/>
         <BookButton
           text={isclicked ? "Bookmarked" : "Bookmark"}
           handleClick={handleClick}
