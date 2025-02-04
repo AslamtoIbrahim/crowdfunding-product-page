@@ -5,8 +5,9 @@ type props = {
   price?: number;
   description?: string;
   amount?: number;
+  onClick?: () => void; // Callback function to handle reward selection
 };
-function Pledge({ title, price, description, amount }: props) {
+function Pledge({ title, price, description, amount, onClick }: props) {
   return (
     <div className="flex flex-col gap-8 font-commissioner border-zinc-300 border-2 rounded-md px-[1.125rem] md:px-[2.125rem] py-[1.625rem] md:py-[2.625rem]">
 
@@ -23,7 +24,7 @@ function Pledge({ title, price, description, amount }: props) {
           <span className="text-gray-950 text-2xl font-bold font-commissioner ">{amount}</span> left
           </p>
         </div>
-        <Button text="Select Reward" style="0.875rem 2rem" />
+        <Button text="Select Reward" style="0.875rem 2rem" onClick={onClick}/>
       </section>
     </div>
   );
