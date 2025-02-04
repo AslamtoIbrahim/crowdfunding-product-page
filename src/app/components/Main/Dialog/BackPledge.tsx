@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Button from "../Button";
 import PledgeInput from "./PledgeInput";
 
@@ -7,6 +8,11 @@ type props = {
   description?: string;
   amount?: number;
   isAvailble?: boolean;
+  groupName: string;
+  onselect: (title: string) => void;
+  onlick?: () => void;
+  selected?: boolean;
+  disabled?: boolean;
 };
 
 function BackPledge({
@@ -14,18 +20,36 @@ function BackPledge({
   price,
   description,
   amount = -1,
+  groupName,
+  onselect,
+  onlick,
+  selected,
+  disabled = false,
 }: props) {
+  const [pledgePrice, setpledgePrice] = useState(price);
+  const handleChange = (input: number) => {
+    setpledgePrice(Number(input)); // Update pledgeAmount whenever input changes
+  };
   return (
-    <div className={`${(amount == 0) ? `opacity-55 ` : `group`}`}>
+    <div className={`${amount == 0 ? `opacity-55 ` : `group`}`}>
       <label
-        htmlFor="options"
+        htmlFor={`options-${title}`}
         className="cursor-pointer md:relative flex flex-col gap-8 font-commissioner border-slate-400 border-2 rounded-md px-[1.125rem]
          group-has-[input:checked]:border-dark-cyan
          group-has-[input:checked]:border-2 group-has-[input:checked]:rounded-md
          md:px-[2.125rem] py-[1.625rem] md:py-[2.625rem]"
       >
         <section className="flex items-center gap-4">
-          <input id="option" type="radio" className="hidden" name="options" />
+          <input
+            id={`options-${title}`}
+            type="radio"
+            className="hidden"
+            name={groupName}
+            value={title}
+            checked={selected}
+            onChange={() => !disabled && onselect(title!)}
+            disabled={disabled}
+          />
           <div className="w-6 h-6 border-dark-cyan border-2 rounded-full flex justify-center items-center ">
             <span className="w-3 h-3 rounded-full group-has-[input:checked]:bg-dark-cyan"></span>
           </div>
@@ -43,19 +67,28 @@ function BackPledge({
           <div className="md:absolute top-[2.625rem] right-[2.125rem] ">
             <p className="text-dark-gray flex items-center gap-2 ">
               <span className="text-gray-950 text-2xl font-bold font-commissioner  ">
-                {(amount >= 0) && amount}
+                {amount >= 0 && amount}
               </span>
-              {(amount >= 0) ? "left" : ""}
+              {amount >= 0 ? "left" : ""}
             </p>
           </div>
         </section>
-        <section className="hidden group-has-[input:checked]:block">
+        <section
+          className={`hidden ${
+            amount > 0 && `group-has-[input:checked]:block`
+          }`}
+        >
           <hr className="mb-[1.625rem] md:mb-[2.625rem]" />
           <div className="flex flex-col md:flex-row items-center md:justify-between gap-6">
             <p className="text-dark-gray">{price && "Enter your pledge"}</p>
             <div className="flex gap-4 ">
-              {price && <PledgeInput value={price} />}
-              <Button text="Continue" />
+              {price && (
+                <PledgeInput
+                  initalValue={pledgePrice}
+                  onInpuChange={handleChange}
+                />
+              )}
+              <Button text="Continue" onClick={onlick} />
             </div>
           </div>
         </section>
