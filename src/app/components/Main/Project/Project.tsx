@@ -8,7 +8,7 @@ type props = {
 
 function Project({onClick} : props) {
   return (
-    <div className="bg-white w-[min(100%-4rem,60rem)]  px-[2.9375rem] shadow-md pt-[3.5rem] pb-[2.4375rem]  md:pt-[3.875rem] md:pb-[2.875rem] rounded-md  flex flex-col gap-[2.25rem] md:[2.5rem]">
+    <div className="bg-white w-card  px-5 md:px-7 lg:px-9 shadow-md pt-[3.5rem] pb-[2.4375rem]  md:pt-[3.875rem] md:pb-[2.875rem] rounded-md  flex flex-col gap-[2.25rem] md:[2.5rem]">
       <About />
       <Pledge
         title="Bamboo Stand"

@@ -23,6 +23,10 @@ export default {
         'hero-desktop' : "url('../../images/image-hero-desktop.jpg')",
         'hero-mobile' : "url('../../images/image-hero-mobile.jpg')",
       },
+
+      width :{
+        cards: 'min(100%-3rem,60rem)',
+      }
       
     },
   },

@@ -21,9 +21,9 @@ function DialogBack({ closeClick, onClickContinue}: props) {
   };
   return (
     <div>
-      <div onClick={handleClose} className={`fixed inset-0 bg-black/35 ${isClose && `hidden`}`}></div>
-      <div className="absolute top-[7.5rem] w-[min(100%-4rem,60rem)] md:top-[11.5rem]  left-1/2 -translate-x-1/2 font-commissioner">
-        <div className="bg-white px-[2.9375rem] shadow-md pt-[3.5rem] pb-[2.4375rem]  md:pt-[3.875rem] md:pb-[2.875rem] rounded-md  flex flex-col gap-[2.25rem]">
+      <div onClick={handleClose} className={`fixed inset-0 bg-black/75 ${isClose && `hidden`}`}></div>
+      <div className="absolute top-[7.5rem] w-card md:top-[11.5rem]  left-1/2 -translate-x-1/2 font-commissioner">
+        <div className="bg-white px-5 md:px-7 lg:px-9 shadow-md pt-[3.5rem] pb-[2.4375rem]  md:pt-[3.875rem] md:pb-[2.875rem] rounded-md  flex flex-col gap-[2.25rem]">
           <section>
             <div className=" flex justify-between items-center md:items-start mb-3 ">
               <h1 className="text-base md:text-lg font-extrabold">
@@ -36,7 +36,7 @@ function DialogBack({ closeClick, onClickContinue}: props) {
               out in the world?
             </p>
           </section>
-          <section className="flex flex-col gap-[2.25rem] ">
+          <section className="flex flex-col gap-4 md:gap-6 lg:gap-8 ">
             <BackPledge
               groupName="group"
               title="Pledge with no reward"

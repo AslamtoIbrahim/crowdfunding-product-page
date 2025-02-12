@@ -9,7 +9,7 @@ type props = {
 };
 function Pledge({ title, price, description, amount, onClick }: props) {
   return (
-    <div className="flex flex-col gap-8 font-commissioner border-zinc-300 border-2 rounded-md px-[1.125rem] md:px-[2.125rem] py-[1.625rem] md:py-[2.625rem]">
+    <div className="flex flex-col gap-8 font-commissioner border-zinc-300 border-2 rounded-md px-4 md:px-8 py-5 md:py-8">
 
       <section className="flex flex-col md:flex-row gap-2 md:justify-between  ">
         <h1 className="text-base md:text-lg font-extrabold">{title}</h1>

@@ -3,7 +3,7 @@ import StatsRange from "./StatsRange";
 
 function BackStatics() {
   return (
-    <div className="bg-white w-[min(100%-4rem,60rem)]  px-[2.9375rem] shadow-md pt-[3.5rem] pb-[2.4375rem]  md:pt-[3.875rem] md:pb-[2.875rem] rounded-md  flex flex-col justify-center items-center">
+    <div className="bg-white w-card px-5 md:px-7 lg:px-9 shadow-md pt-[3.5rem] pb-[2.4375rem]  md:py-8 rounded-md  flex flex-col justify-center items-center">
 
       <section className="w-full h-full flex  md:gap-[2.75rem] items-center flex-col md:flex-row  ">
 

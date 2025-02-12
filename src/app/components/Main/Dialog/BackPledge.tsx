@@ -34,12 +34,12 @@ function BackPledge({
     <div className={`${amount == 0 ? `opacity-55 ` : `group`}`}>
       <label
         htmlFor={`options-${title}`}
-        className="cursor-pointer md:relative flex flex-col gap-8 font-commissioner border-slate-400 border-2 rounded-md px-[1.125rem]
+        className="cursor-pointer md:relative flex flex-col gap-3 md:gap-6 font-commissioner border-slate-400 border-2 rounded-md 
          group-has-[input:checked]:border-dark-cyan
          group-has-[input:checked]:border-2 group-has-[input:checked]:rounded-md
-         md:px-[2.125rem] py-[1.625rem] md:py-[2.625rem]"
+         px-3 md:px-4 lg:px-6 py-[1.625rem] md:py-[2.625rem]"
       >
-        <section className="flex items-center gap-4">
+        <section className="flex items-center gap-3 md:gap-5 lg:gap-6">
           <input
             id={`options-${title}`}
             type="radio"
@@ -50,11 +50,11 @@ function BackPledge({
             onChange={() => !disabled && onselect(title!)}
             disabled={disabled}
           />
-          <div className="w-6 h-6 border-dark-cyan border-2 rounded-full flex justify-center items-center ">
+          <div className="w-5 h-5 md:w-6 lg:w-7 md:h-6 lg:h-7 border-dark-cyan border-2 rounded-full flex justify-center items-center ">
             <span className="w-3 h-3 rounded-full group-has-[input:checked]:bg-dark-cyan"></span>
           </div>
-          <div className="flex flex-col md:flex-row gap-4 md:items-center  ">
-            <h1 className="text-base md:text-lg font-extrabold">{title}</h1>
+          <div className="flex flex-col md:flex-row md:gap-4 md:items-center  ">
+            <h1 className="text-sm md:text-lg font-extrabold">{title}</h1>
             <p className="text-moderate-cyan font-semibold">
               {price && `Pledge $${price} or more`}
             </p>

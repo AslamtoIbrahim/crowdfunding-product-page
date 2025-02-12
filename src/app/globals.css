@@ -2,12 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
-  @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&display=swap');
-  --background: #FAFAFA;
+  @import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&display=swap");
+  --background: #fafafa;
   --foreground: #171717;
-
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,15 +15,17 @@
   }
 }
 
- 
-
 .commissioner-font {
   font-family: "Commissioner", serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
-  font-variation-settings:
-    "slnt" 0,
-    "FLAR" 0,
-    "VOLM" 0;
+  font-variation-settings: "slnt" 0, "FLAR" 0, "VOLM" 0;
+}
+
+@layer utilities {
+  .w-card {
+    width: min(100% - 2rem, 60rem);
+  }
+  
 }

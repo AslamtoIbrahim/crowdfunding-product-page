@@ -12,8 +12,8 @@ function Button({ text, style = "", ability = false, color, onClick }: props) {
       disabled={ability}
       style={{ padding: style, backgroundColor: color }}
       className={`
-       bg-moderate-cyan px-[2.8125rem] md:px-[2.5rem] py-3 rounded-full text-white text-sm 
-        md:text-base font-bold font-commissioner
+       bg-moderate-cyan px-5 md:px-7 py-3 rounded-full text-white font-medium font-commissioner
+       text-sm md:text-base lg:text-xl
         hover:bg-dark-cyan transition-all duration-200 ease-in-out ${style}
         ${ability && `cursor-default bg-dark-gray hover:bg-dark-gray `} `}
     >
