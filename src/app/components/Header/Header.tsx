@@ -4,13 +4,21 @@ import logo from "../../../../images/logo.svg";
 import MenuButton from "./MenuButton";
 import "./Header.css";
 import MobileMenu from "./MobileMenu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CloseButton from "./CloseButton";
 function Header() {
   const [active, setActive] = useState(false);
   const onlcik = () => {
     setActive(!active);
   };
+
+  useEffect(()=>{
+    if (active) {
+      document.body.style.overflow = 'hidden';
+    }else{
+      document.body.style.overflow = 'auto';
+    }
+  }, [active])
   return (
     <header className={`
     absolute top-0 bg-hero-mobile md:bg-hero-desktop bg-no-repeat bg-center bg-cover 
